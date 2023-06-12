@@ -41,10 +41,10 @@ const MyProjects = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="absolute z-20 flex h-[100%] w-[100%] flex-col items-center justify-center overflow-hidden whitespace-normal rounded-xl bg-black object-cover p-5 text-center text-white opacity-0 transition duration-500 hover:opacity-75 md:p-0">
-              <p className=" cursor-default select-none pt-5 text-taso-30 md:pb-10 md:pt-0 md:text-4xl">
+              <p className=" md:opactiy-1 cursor-default select-none text-taso-30 opacity-0 md:pb-10  md:text-4xl">
                 EvoGym Responsive Website
               </p>
-              <p className="mb:py-0 cursor-default select-none py-5 text-center text-sm md:text-base">
+              <p className=" md:opacity-1 cursor-default select-none text-center opacity-0  md:text-base">
                 You will love this fully responsive website I made with react,
                 typescript and tailwindcss!
               </p>
