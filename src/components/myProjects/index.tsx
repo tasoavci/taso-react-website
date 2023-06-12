@@ -24,7 +24,7 @@ const MyProjects = ({ setSelectedPage }: Props) => {
             hidden: { opacity: 0, x: -80 },
             visible: { opacity: 1, x: 0 },
           }}
-          className="mx-auto mb-16 flex w-5/6 items-center justify-center xl:mt-10"
+          className="mx-auto mb-16 flex w-5/6 items-center justify-center xl:mt-24"
         >
           <h1 className="cursor-default select-none text-center text-xl font-bold text-taso-10 sm:text-3xl md:text-4xl">
             HERE ARE SOME OF <span className="text-taso-40">MY PROJECTS:</span>
