@@ -2,12 +2,14 @@ import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
 import EvoGym from "@/assets/EvoGym.png";
 import SpaceShooter from "@/assets/SpaceShooterGame.png";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
 const MyProjects = ({ setSelectedPage }: Props) => {
+  const isAboveSmallScreens = useMediaQuery("(min-width:760px)");
   return (
     <section id="myprojects" className="mx-auto min-h-full w-full py-32 ">
       <motion.div
@@ -41,18 +43,24 @@ const MyProjects = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="absolute z-20 flex h-[100%] w-[100%] flex-col items-center justify-center overflow-hidden whitespace-normal rounded-xl bg-black object-cover p-5 text-center text-white opacity-0 transition duration-500 hover:opacity-75 md:p-0">
-              <p className=" md:opactiy-1 cursor-default select-none text-taso-30 opacity-0 md:pb-10  md:text-4xl">
-                EvoGym Responsive Website
-              </p>
-              <p className=" md:opacity-1 cursor-default select-none text-center opacity-0  md:text-base">
-                You will love this fully responsive website I made with react,
-                typescript and tailwindcss!
-              </p>
+              {isAboveSmallScreens ? (
+                <>
+                  <p className=" cursor-default select-none pt-5 text-taso-30 md:pb-10 md:pt-0 md:text-4xl">
+                    EvoGym Responsive Website
+                  </p>
+                  <p className="mb:py-0 cursor-default select-none py-5 text-center  md:text-base">
+                    You will love this fully responsive website I made with
+                    react, typescript and tailwindcss!
+                  </p>
+                </>
+              ) : (
+                ""
+              )}
               <a
                 target="_blank"
                 href="https://github.com/tasoavci/gym-react-typescript-tailwindcss"
               >
-                <button className="mb-5 cursor-pointer select-none rounded-xl bg-taso-10 px-6 py-3 text-white transition duration-500 hover:bg-taso-40 md:mb-0 md:mt-5 ">
+                <button className="mb-5 cursor-pointer select-none rounded-xl bg-taso-10 px-5 py-1 text-white transition duration-500 hover:bg-taso-40 md:mb-0 md:mt-5 md:px-6 md:py-3 ">
                   You can check the source codes here!
                 </button>
               </a>
