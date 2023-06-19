@@ -11,7 +11,10 @@ type Props = {
 const MyProjects = ({ setSelectedPage }: Props) => {
   const isAboveSmallScreens = useMediaQuery("(min-width:760px)");
   return (
-    <section id="myprojects" className="mx-auto min-h-full w-full py-32 ">
+    <section
+      id="myprojects"
+      className="mx-auto min-h-full w-full overflow-x-hidden py-32 "
+    >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.MyProjects)}
       >
@@ -78,7 +81,7 @@ const MyProjects = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.8 }}
             variants={{
-              hidden: { opacity: 0, y: -80 },
+              hidden: { opacity: 0, y: 80 },
               visible: { opacity: 1, y: 0 },
             }}
             className="relative m-16 mx-auto flex w-5/6 items-center justify-center "

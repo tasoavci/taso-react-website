@@ -7,6 +7,21 @@ import TechnologyStack from "@/components/technologyStack";
 import ContactMe from "@/components/contactMe";
 import Footer from "@/components/footer";
 
+const sections = [
+  {
+    component: Home,
+  },
+  {
+    component: MyProjects,
+  },
+  {
+    component: TechnologyStack,
+  },
+  {
+    component: ContactMe,
+  },
+];
+
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
     SelectedPage.Home
@@ -35,10 +50,9 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <Home setSelectedPage={setSelectedPage} />
-      <MyProjects setSelectedPage={setSelectedPage} />
-      <TechnologyStack setSelectedPage={setSelectedPage} />
-      <ContactMe setSelectedPage={setSelectedPage} />
+      {sections.map((section) => (
+        <section.component setSelectedPage={setSelectedPage} />
+      ))}
       <Footer />
     </div>
   );

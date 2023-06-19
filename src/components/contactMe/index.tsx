@@ -54,8 +54,8 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 80 },
-              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, x: -80 },
+              visible: { opacity: 1, x: 0 },
             }}
             className="mt-10 basis-3/5 md:mt-0"
           >
@@ -129,7 +129,7 @@ const ContactMe = ({ setSelectedPage }: Props) => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             variants={{
-              hidden: { opacity: 0, y: 80 },
+              hidden: { opacity: 0, y: -50 },
               visible: { opacity: 1, y: 0 },
             }}
             className="mt-16 basis-2/5 md:mt-0"
