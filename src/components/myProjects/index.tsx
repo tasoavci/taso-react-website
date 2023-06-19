@@ -61,10 +61,10 @@ const MyProjects = ({ setSelectedPage }: Props) => {
               )}
               <a
                 target="_blank"
-                href="https://github.com/tasoavci/gym-react-typescript-tailwindcss"
+                href="https://gym-react-typescript-tailwindcss.vercel.app/"
               >
                 <button className="cursor-pointer select-none rounded-xl bg-taso-10 px-5 py-1 text-white transition duration-500 hover:bg-taso-40  md:mb-5 md:mt-5 md:px-6 md:py-3 ">
-                  You can check the source codes here!
+                  You can check the website here
                 </button>
               </a>
             </div>
